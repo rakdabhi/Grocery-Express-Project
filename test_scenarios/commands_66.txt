@@ -1,0 +1,11 @@
+// create multiple stores
+make_store,kroger,33000,100,100
+make_store,publix,33000,500,500
+// create multiple customers
+make_customer,aapple2,Alana,Apple,222-222-2222,4,100,200,200
+make_customer,ccherry4,Carlos,Cherry,444-444-4444,5,300,400,400
+// display distance between store and customers
+display_distance,kroger,aapple2
+display_distance,kroger,ccherry4
+display_distance,publix,ccherry4
+stop

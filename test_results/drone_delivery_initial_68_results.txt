@@ -1,0 +1,78 @@
+Welcome to the Grocery Express Delivery Service!
+> // create multiple stores
+> make_store,kroger,33000,100,100
+OK:change_completed
+> make_store,publix,33000,500,500
+OK:change_completed
+> // create multiple items to be sold by stores
+> sell_item,kroger,pot_roast,5
+OK:change_completed
+> sell_item,kroger,cheesecake,4
+OK:change_completed
+> sell_item,publix,cheesecake,8
+OK:change_completed
+> // create multiple pilots to control the drones
+> make_pilot,ffig8,Finneas,Fig,888-888-8888,890-12-3456,panam_10,33
+OK:change_completed
+> make_pilot,ggrape17,Gillian,Grape,999-999-9999,234-56 7890,twa_21,31
+OK:change_completed
+> // create multiple drones to deliver the orders
+> make_drone,kroger,1,40,1000,10,10,1
+OK:change_completed
+> make_drone,publix,1,40,5000,10,10,1
+OK:change_completed
+> make_drone,kroger,2,20,5000,10,10,1
+OK:change_completed
+> fly_drone,kroger,1,ffig8
+OK:change_completed
+> fly_drone,publix,1,ggrape17
+OK:change_completed
+> // create multiple customers
+> make_customer,aapple2,Alana,Apple,222-222-2222,4,100,200,200
+OK:change_completed
+> make_customer,ccherry4,Carlos,Cherry,444-444-4444,5,300,400,400
+OK:change_completed
+> // create multiple orders as requested by customers
+> start_order,kroger,purchaseA,1,aapple2,1000
+ERROR:order_distance_exceeded_drone_max_flight_range
+> start_order,kroger,purchaseB,1,aapple2,1000
+ERROR:order_distance_exceeded_drone_max_flight_range
+> start_order,kroger,purchaseD,2,ccherry4,1000
+OK:change_completed
+> start_order,publix,purchaseA,1,ccherry4,1000
+OK:change_completed
+> // add multiple items to the orders
+> request_item,kroger,purchaseA,pot_roast,3,10
+ERROR:order_identifier_does_not_exist
+> request_item,kroger,purchaseB,pot_roast,4,5
+ERROR:order_identifier_does_not_exist
+> request_item,publix,purchaseA,cheesecake,3,10
+OK:change_completed
+> request_item,kroger,purchaseD,cheesecake,1,10
+OK:change_completed
+> // display drones for in store publix
+> display_drones,publix
+droneID:1,total_cap:40,num_orders:1,remaining_cap:16,fuel_cap:5000,remaining_fuel:5000,refuel_rate:10,fuel_consumption_rate:10,speed:1,flown_by:Gillian_Grape
+OK:display_completed
+> // display time before purchasing an order
+> display_time
+Time: 22 min (Day 0, 00:22AM)
+OK:display_completed
+> // display distance between store and customers
+> display_distance,publix,ccherry4
+Distance: 142
+OK:display_completed
+> // deliver an order and display the updated state
+> purchase_order,publix,purchaseA
+Delivery Time: 142 minutes
+OK:change_completed
+> // display time after purchasing an order
+> display_time
+Time: 164 min (Day 0, 02:44AM)
+OK:display_completed
+> display_drones,publix
+droneID:1,total_cap:40,num_orders:0,remaining_cap:40,fuel_cap:5000,remaining_fuel:3580,refuel_rate:10,fuel_consumption_rate:10,speed:1,flown_by:Gillian_Grape
+OK:display_completed
+> stop
+stop acknowledged
+simulation terminated

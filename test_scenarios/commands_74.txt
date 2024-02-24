@@ -1,0 +1,40 @@
+// clean up archive folder before test
+clean_archive
+// create 20 customers
+make_customer,aapple2,Alana,Apple,222-222-2222,4,100,1000,1000
+make_customer,banana3,Brian,Banana,333-333-3333,4,100,1001,1001
+make_customer,cherry4,Carla,Cherry,444-444-4444,4,100,1002,1002
+make_customer,date5,David,Date,555-555-5555,4,100,1003,1003
+make_customer,elderberry6,Emily,Elderberry,666-666-6666,4,100,1004,1004
+make_customer,fig7,Frank,Fig,777-777-7777,4,100,1005,1005
+make_customer,grape8,Gina,Grape,888-888-8888,4,100,1006,1006
+make_customer,honeydew9,Henry,Honeydew,999-999-9999,4,100,1007,1007
+make_customer,kiwi10,Karen,Kiwi,1010-1010-1010,4,100,1008,1008
+make_customer,lime11,Liam,Lime,1111-1111-1111,4,100,1009,1009
+make_customer,mango12,Mia,Mango,1212-1212-1212,4,100,1010,1010
+make_customer,nectarine13,Noah,Nectarine,1313-1313-1313,4,100,1011,1011
+make_customer,orange14,Olivia,Orange,1414-1414-1414,4,100,1012,1012
+make_customer,papaya15,Peter,Papaya,1515-1515-1515,4,100,1013,1013
+make_customer,quince16,Quinn,Quince,1616-1616-1616,4,100,1014,1014
+make_customer,raisin17,Rachel,Raisin,1717-1717-1717,4,100,1015,1015
+make_customer,strawberry18,Steven,Strawberry,1818-1818-1818,4,100,1016,1016
+make_customer,tangerine19,Taylor,Tangerine,1919-1919-1919,4,100,1017,1017
+make_customer,ugli20,Uma,Ugli,2020-2020-2020,4,100,1018,1018
+make_customer,vanilla21,Victor,Vanilla,2121-2121-2121,4,100,1019,1019
+// display customers
+display_customers
+// export customers
+export_customers
+// display archive
+display_archive
+// purge customers
+purge_customers
+// display customers
+display_customers
+// import customers
+import_customers,customers_Day_0_00:20_AM.csv
+// display customer
+display_customers
+// clean up archive folder after test
+clean_archive
+stop

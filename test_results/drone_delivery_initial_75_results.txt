@@ -1,0 +1,93 @@
+Welcome to the Grocery Express Delivery Service!
+> // clean up archive folder before test
+> clean_archive
+OK:change_completed
+> // create 20 customers
+> make_customer,aapple2,Alana,Apple,222-222-2222,4,100,1000,1000
+OK:change_completed
+> make_customer,banana3,Brian,Banana,333-333-3333,4,100,1001,1001
+OK:change_completed
+> make_customer,cherry4,Carla,Cherry,444-444-4444,4,100,1002,1002
+OK:change_completed
+> make_customer,date5,David,Date,555-555-5555,4,100,1003,1003
+OK:change_completed
+> make_customer,elderberry6,Emily,Elderberry,666-666-6666,4,100,1004,1004
+OK:change_completed
+> make_customer,fig7,Frank,Fig,777-777-7777,4,100,1005,1005
+OK:change_completed
+> make_customer,grape8,Gina,Grape,888-888-8888,4,100,1006,1006
+OK:change_completed
+> make_customer,honeydew9,Henry,Honeydew,999-999-9999,4,100,1007,1007
+OK:change_completed
+> make_customer,kiwi10,Karen,Kiwi,1010-1010-1010,4,100,1008,1008
+OK:change_completed
+> make_customer,lime11,Liam,Lime,1111-1111-1111,4,100,1009,1009
+OK:change_completed
+> make_customer,mango12,Mia,Mango,1212-1212-1212,4,100,1010,1010
+OK:change_completed
+> make_customer,nectarine13,Noah,Nectarine,1313-1313-1313,4,100,1011,1011
+OK:change_completed
+> make_customer,orange14,Olivia,Orange,1414-1414-1414,4,100,1012,1012
+OK:change_completed
+> make_customer,papaya15,Peter,Papaya,1515-1515-1515,4,100,1013,1013
+OK:change_completed
+> make_customer,quince16,Quinn,Quince,1616-1616-1616,4,100,1014,1014
+OK:change_completed
+> make_customer,raisin17,Rachel,Raisin,1717-1717-1717,4,100,1015,1015
+OK:change_completed
+> make_customer,strawberry18,Steven,Strawberry,1818-1818-1818,4,100,1016,1016
+OK:change_completed
+> make_customer,tangerine19,Taylor,Tangerine,1919-1919-1919,4,100,1017,1017
+OK:change_completed
+> make_customer,ugli20,Uma,Ugli,2020-2020-2020,4,100,1018,1018
+OK:change_completed
+> make_customer,vanilla21,Victor,Vanilla,2121-2121-2121,4,100,1019,1019
+OK:change_completed
+> // display customer
+> display_customers
+name:Alana_Apple,phone:222-222-2222,rating:4,credit:100
+name:Brian_Banana,phone:333-333-3333,rating:4,credit:100
+name:Carla_Cherry,phone:444-444-4444,rating:4,credit:100
+name:David_Date,phone:555-555-5555,rating:4,credit:100
+name:Emily_Elderberry,phone:666-666-6666,rating:4,credit:100
+name:Frank_Fig,phone:777-777-7777,rating:4,credit:100
+name:Gina_Grape,phone:888-888-8888,rating:4,credit:100
+name:Henry_Honeydew,phone:999-999-9999,rating:4,credit:100
+name:Karen_Kiwi,phone:1010-1010-1010,rating:4,credit:100
+name:Liam_Lime,phone:1111-1111-1111,rating:4,credit:100
+name:Mia_Mango,phone:1212-1212-1212,rating:4,credit:100
+name:Noah_Nectarine,phone:1313-1313-1313,rating:4,credit:100
+name:Olivia_Orange,phone:1414-1414-1414,rating:4,credit:100
+name:Peter_Papaya,phone:1515-1515-1515,rating:4,credit:100
+name:Quinn_Quince,phone:1616-1616-1616,rating:4,credit:100
+name:Rachel_Raisin,phone:1717-1717-1717,rating:4,credit:100
+name:Steven_Strawberry,phone:1818-1818-1818,rating:4,credit:100
+name:Taylor_Tangerine,phone:1919-1919-1919,rating:4,credit:100
+name:Uma_Ugli,phone:2020-2020-2020,rating:4,credit:100
+name:Victor_Vanilla,phone:2121-2121-2121,rating:4,credit:100
+OK:display_completed
+> // display time
+> display_time
+Time: 20 min (Day 0, 00:20AM)
+OK:display_completed
+> // set current time to day 10
+> set_time,15000
+OK:Customers_Data_Has_Been_Purged
+OK:change_completed
+> // display time
+> display_time
+Time: 15000 min (Day 10, 10:00AM)
+OK:display_completed
+> // display customers
+> display_customers
+OK:display_completed
+> // display archived files
+> display_archive
+customers_Day_10_10:00_AM.csv
+OK:display_completed
+> // clean up archive folder after test
+> clean_archive
+OK:change_completed
+> stop
+stop acknowledged
+simulation terminated

@@ -1,0 +1,52 @@
+// create multiple stores
+make_store,kroger,33000,100,100
+make_store,publix,33000,500,500
+// create multiple items to be sold by stores
+sell_item,kroger,pot_roast,5
+sell_item,kroger,cheesecake,4
+sell_item,publix,cheesecake,8
+// create multiple pilots to control the drones
+make_pilot,ffig8,Finneas,Fig,888-888-8888,890-12-3456,panam_10,33
+make_pilot,ggrape17,Gillian,Grape,999-999-9999,234-56 7890,twa_21,31
+// create multiple drones to deliver the orders
+make_drone,kroger,1,40,1000,10,10,1
+make_drone,publix,1,40,5000,10,10,1
+make_drone,kroger,2,20,5000,10,10,1
+fly_drone,kroger,1,ffig8
+fly_drone,publix,1,ggrape17
+// create multiple customers
+make_customer,aapple2,Alana,Apple,222-222-2222,4,100,200,200
+make_customer,ccherry4,Carlos,Cherry,444-444-4444,5,300,400,400
+// create multiple orders as requested by customers
+start_order,kroger,purchaseA,1,aapple2,1000
+start_order,kroger,purchaseB,1,aapple2,1000
+start_order,kroger,purchaseD,2,ccherry4,1000
+start_order,publix,purchaseA,1,ccherry4,1000
+// add multiple items to the orders
+request_item,kroger,purchaseA,pot_roast,3,10
+request_item,kroger,purchaseB,pot_roast,4,5
+request_item,publix,purchaseA,cheesecake,3,10
+request_item,kroger,purchaseD,cheesecake,1,10
+// display drones for in store publix
+display_drones,publix
+// display time before purchasing an order
+display_time
+// display distance between store and customers
+display_distance,publix,ccherry4
+// deliver an order and display the updated state
+purchase_order,publix,purchaseA
+// display time after purchasing an order
+display_time
+display_drones,publix
+// create a new order
+start_order,publix,purchaseA,1,aapple2,1000
+// Set system time to daytime
+set_time,720
+display_time
+display_distance,publix,aapple2
+display_drones,publix
+purchase_order,publix,purchaseA
+// display time after purchasing an order
+display_time
+display_drones,publix
+stop
