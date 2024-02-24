@@ -1,4 +1,4 @@
-#  CS6310 A5 Grocery Express Project
+# Grocery Express Project
 
 ## Demo Link
 https://youtu.be/bhnNWD6GuAY
